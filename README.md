@@ -94,12 +94,6 @@ Render kode QR langsung di perangkat tanpa internet.
 
 ## Tangkapan Layar
 
-<div align="center">
-  <img src="./assets/wristpay-hero.jpg" alt="Universal WristPay Hero" width="100%" />
-</div>
-
-<br />
-
 <table>
 <tr>
 <td width="33%" align="center">
