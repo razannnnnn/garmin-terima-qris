@@ -1,0 +1,58 @@
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connectiq/resources.xsd">
+    <setting propertyKey="@Properties.enable_demo_merchant" title="@Strings.SettingEnableDemoTitle" prompt="@Strings.SettingEnableDemoPrompt">
+        <settingConfig type="boolean" />
+    </setting>
+
+    <setting propertyKey="@Properties.active_merchant_index" title="@Strings.SettingActiveMerchantTitle">
+        <settingConfig type="list">
+            <listEntry value="0">Merchant 1</listEntry>
+            <listEntry value="1">Merchant 2</listEntry>
+            <listEntry value="2">Merchant 3</listEntry>
+            <listEntry value="3">Merchant 4</listEntry>
+            <listEntry value="4">Merchant 5</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.amount_tag01_mode" title="@Strings.SettingAmountModeTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.SettingModeDynamic</listEntry>
+            <listEntry value="1">@Strings.SettingModeStaticAmount</listEntry>
+            <listEntry value="2">@Strings.SettingModeStaticOnly</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.m1_alias" title="@Strings.SettingM1Alias">
+        <settingConfig type="alphaNumeric" maxLength="25" />
+    </setting>
+    <setting propertyKey="@Properties.m1_payload" title="@Strings.SettingM1Payload">
+        <settingConfig type="alphaNumeric" maxLength="512" />
+    </setting>
+
+    <setting propertyKey="@Properties.m2_alias" title="@Strings.SettingM2Alias">
+        <settingConfig type="alphaNumeric" maxLength="25" />
+    </setting>
+    <setting propertyKey="@Properties.m2_payload" title="@Strings.SettingM2Payload">
+        <settingConfig type="alphaNumeric" maxLength="512" />
+    </setting>
+
+    <setting propertyKey="@Properties.m3_alias" title="@Strings.SettingM3Alias">
+        <settingConfig type="alphaNumeric" maxLength="25" />
+    </setting>
+    <setting propertyKey="@Properties.m3_payload" title="@Strings.SettingM3Payload">
+        <settingConfig type="alphaNumeric" maxLength="512" />
+    </setting>
+
+    <setting propertyKey="@Properties.m4_alias" title="@Strings.SettingM4Alias">
+        <settingConfig type="alphaNumeric" maxLength="25" />
+    </setting>
+    <setting propertyKey="@Properties.m4_payload" title="@Strings.SettingM4Payload">
+        <settingConfig type="alphaNumeric" maxLength="512" />
+    </setting>
+
+    <setting propertyKey="@Properties.m5_alias" title="@Strings.SettingM5Alias">
+        <settingConfig type="alphaNumeric" maxLength="25" />
+    </setting>
+    <setting propertyKey="@Properties.m5_payload" title="@Strings.SettingM5Payload">
+        <settingConfig type="alphaNumeric" maxLength="512" />
+    </setting>
+</settings>

@@ -1,0 +1,16 @@
+<properties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connectiq/resources.xsd">
+    <property id="enable_demo_merchant" type="boolean">true</property>
+    <property id="active_merchant_index" type="number">0</property>
+    <property id="amount_tag01_mode" type="number">0</property>
+
+    <property id="m1_alias" type="string"></property>
+    <property id="m1_payload" type="string"></property>
+    <property id="m2_alias" type="string"></property>
+    <property id="m2_payload" type="string"></property>
+    <property id="m3_alias" type="string"></property>
+    <property id="m3_payload" type="string"></property>
+    <property id="m4_alias" type="string"></property>
+    <property id="m4_payload" type="string"></property>
+    <property id="m5_alias" type="string"></property>
+    <property id="m5_payload" type="string"></property>
+</properties>

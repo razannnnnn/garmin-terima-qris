@@ -1,0 +1,22 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connectiq/resources.xsd">
+    <string id="AppName">WristPay QRIS</string>
+
+    <string id="SettingEnableDemoTitle">Aktifkan Merchant Demo</string>
+    <string id="SettingEnableDemoPrompt">Gunakan QRIS demo (LANDFLORIST) jika belum ada merchant</string>
+    <string id="SettingActiveMerchantTitle">Merchant Aktif (1-5)</string>
+    <string id="SettingAmountModeTitle">Mode QRIS Nominal (Tag 01)</string>
+    <string id="SettingModeDynamic">Dinamis (Tag 01 = 12)</string>
+    <string id="SettingModeStaticAmount">Statis + Nominal (Tag 01 = 11)</string>
+    <string id="SettingModeStaticOnly">Tolak Nominal (Statis Saja)</string>
+
+    <string id="SettingM1Alias">Merchant 1 - Nama (Opsional)</string>
+    <string id="SettingM1Payload">Merchant 1 - Payload QRIS</string>
+    <string id="SettingM2Alias">Merchant 2 - Nama (Opsional)</string>
+    <string id="SettingM2Payload">Merchant 2 - Payload QRIS</string>
+    <string id="SettingM3Alias">Merchant 3 - Nama (Opsional)</string>
+    <string id="SettingM3Payload">Merchant 3 - Payload QRIS</string>
+    <string id="SettingM4Alias">Merchant 4 - Nama (Opsional)</string>
+    <string id="SettingM4Payload">Merchant 4 - Payload QRIS</string>
+    <string id="SettingM5Alias">Merchant 5 - Nama (Opsional)</string>
+    <string id="SettingM5Payload">Merchant 5 - Payload QRIS</string>
+</strings>

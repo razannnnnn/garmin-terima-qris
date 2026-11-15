@@ -1,0 +1,15 @@
+# Garmin Connect IQ build outputs
+bin/
+*.prg
+*.prg.debug.xml
+*.iq
+*.bak
+
+# Developer key (never commit private signing keys)
+developer_key
+*.der
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/*.log
