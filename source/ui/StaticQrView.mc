@@ -42,7 +42,6 @@ module Ui {
                 return;
             }
 
-            // Header: a.n. <MERCHANT>
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
             dc.drawText(cx, 24, Graphics.FONT_XTINY, "a.n. " + merchant.displayName, Graphics.TEXT_JUSTIFY_CENTER);
 

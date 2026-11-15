@@ -73,7 +73,6 @@ module Ui {
             var tx = coords[0];
             var ty = coords[1];
 
-            // Tap step pills: 500 | 1rb | 5rb | 10rb
             if (ty >= AmountInputView.STEP_Y && ty <= AmountInputView.STEP_Y + AmountInputView.STEP_H) {
                 for (var i = 0; i < AmountInputView.STEP_VALUES.size(); i++) {
                     var sx = AmountInputView.STEP_START_X + i * (AmountInputView.STEP_W + AmountInputView.STEP_GAP);
@@ -84,28 +83,24 @@ module Ui {
                 }
             }
 
-            // Tap + button
             if (tx >= AmountInputView.BTN_INC_X && tx <= AmountInputView.BTN_INC_X + AmountInputView.BTN_INC_W &&
                 ty >= AmountInputView.BTN_INC_Y && ty <= AmountInputView.BTN_INC_Y + AmountInputView.BTN_INC_H) {
                 _view.stepUp();
                 return true;
             }
 
-            // Tap - button
             if (tx >= AmountInputView.BTN_DEC_X && tx <= AmountInputView.BTN_DEC_X + AmountInputView.BTN_DEC_W &&
                 ty >= AmountInputView.BTN_DEC_Y && ty <= AmountInputView.BTN_DEC_Y + AmountInputView.BTN_DEC_H) {
                 _view.stepDown();
                 return true;
             }
 
-            // Tap C (Clear)
             if (tx >= AmountInputView.BTN_CLR_X && tx <= AmountInputView.BTN_CLR_X + AmountInputView.BTN_CLR_W &&
                 ty >= AmountInputView.BTN_CLR_Y && ty <= AmountInputView.BTN_CLR_Y + AmountInputView.BTN_CLR_H) {
                 _view.clearAmount();
                 return true;
             }
 
-            // Tap TAMPILKAN QR
             if (tx >= AmountInputView.BTN_QR_X && tx <= AmountInputView.BTN_QR_X + AmountInputView.BTN_QR_W &&
                 ty >= AmountInputView.BTN_QR_Y && ty <= AmountInputView.BTN_QR_Y + AmountInputView.BTN_QR_H) {
                 generateAndShowQr();

@@ -3,7 +3,7 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 
 module Ui {
-    //! Displays the generated dynamic (or static) QRIS code with amount & Selesai button (matches ui_2.jpg).
+    //! Displays the generated QRIS code with amount and Selesai button.
     class QrDisplayView extends WatchUi.View {
         static const BTN_DONE_X = 135;
         static const BTN_DONE_Y = 344;
@@ -37,7 +37,6 @@ module Ui {
 
             var cx = dc.getWidth() / 2;
 
-            // Header: a.n. <MERCHANT>
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
             dc.drawText(cx, 22, Graphics.FONT_XTINY, "a.n. " + _merchantName, Graphics.TEXT_JUSTIFY_CENTER);
 
@@ -54,7 +53,6 @@ module Ui {
                 QrRenderHelper.drawErrorBox(dc, "Gagal Encode QR", "Payload terlalu besar");
             }
 
-            // Selesai pill button
             dc.setColor(0x2E2E34, Graphics.COLOR_BLACK);
             dc.fillRoundedRectangle(BTN_DONE_X, BTN_DONE_Y, BTN_DONE_W, BTN_DONE_H, 16);
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);

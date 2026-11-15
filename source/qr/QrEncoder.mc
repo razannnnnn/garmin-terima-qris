@@ -120,7 +120,6 @@ module Qr {
                 _phase = 4;
                 return false;
             }
-            // _phase == 4: mask + format/version info
             var mods = _baseMod as Array<Number>;
             var funcs = _isFunc as Array<Number>;
             QrEncoder.applyMaskInPlacePublic(mods, funcs, _matSize);

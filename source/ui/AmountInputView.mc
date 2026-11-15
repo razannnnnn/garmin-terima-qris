@@ -3,7 +3,7 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 
 module Ui {
-    //! Page 2: Garmin-style vertical stepper picker (▲ / ▼ + 1rb/5rb/10rb step) for custom QRIS amount.
+    //! Page 2: Stepper amount picker (500 / 1rb / 5rb / 10rb) for custom QRIS amounts.
     class AmountInputView extends WatchUi.View {
         static const STEP_VALUES = [500, 1000, 5000, 10000];
         static const STEP_LABELS = ["500", "1rb", "5rb", "10rb"];
@@ -99,7 +99,6 @@ module Ui {
 
             var cx = dc.getWidth() / 2;
 
-            // Step Selector Pills: 500 | 1rb | 5rb | 10rb
             for (var i = 0; i < STEP_LABELS.size(); i++) {
                 var sx = STEP_START_X + i * (STEP_W + STEP_GAP);
                 var isActive = (i == _stepIdx);
@@ -109,24 +108,20 @@ module Ui {
                 dc.drawText(sx + STEP_W / 2, STEP_Y + STEP_H / 2, Graphics.FONT_XTINY, STEP_LABELS[i], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
             }
 
-            // Increment (+) Button
             dc.setColor(0x28282D, Graphics.COLOR_BLACK);
             dc.fillRoundedRectangle(BTN_INC_X, BTN_INC_Y, BTN_INC_W, BTN_INC_H, 16);
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
             dc.drawText(cx, BTN_INC_Y + BTN_INC_H / 2, Graphics.FONT_MEDIUM, "+", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
-            // Center Amount Display
             var amountText = QrRenderHelper.formatIdr(_amount);
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
             dc.drawText(cx, 189, Graphics.FONT_LARGE, amountText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
-            // Decrement (-) Button
             dc.setColor(0x28282D, Graphics.COLOR_BLACK);
             dc.fillRoundedRectangle(BTN_DEC_X, BTN_DEC_Y, BTN_DEC_W, BTN_DEC_H, 16);
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
             dc.drawText(cx, BTN_DEC_Y + BTN_DEC_H / 2, Graphics.FONT_MEDIUM, "-", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
-            // Bottom Action Row: C + TAMPILKAN QR
             dc.setColor(0x28282D, Graphics.COLOR_BLACK);
             dc.fillRoundedRectangle(BTN_CLR_X, BTN_CLR_Y, BTN_CLR_W, BTN_CLR_H, 22);
             dc.setColor(0xFF2E63, Graphics.COLOR_TRANSPARENT);
