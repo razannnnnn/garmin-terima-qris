@@ -18,7 +18,7 @@ function testQrisStaticValidation(logger as Logger) as Boolean {
     Test.assertMessage(res.isValid, "Expected valid QRIS: " + res.errorMessage);
     Test.assert(res.data != null);
     var d = res.data as Qris.QrisData;
-    Test.assertEqual(d.merchantName, "LANDFLORIST");
+    Test.assertEqual(d.merchantName, "TESTING");
     Test.assertEqual(d.merchantCity, "JAKARTA");
     Test.assertEqual(d.currency, "360");
     Test.assertEqual(d.country, "ID");
@@ -47,7 +47,7 @@ function testQrisDynamicAmountInjection(logger as Logger) as Boolean {
     var d = parsed as Qris.QrisData;
     Test.assertEqual(d.pointOfInitiation, "12");
     Test.assertEqual(d.amount, "5000");
-    Test.assertEqual(d.merchantName, "LANDFLORIST");
+    Test.assertEqual(d.merchantName, "TESTING");
 
     // Static-only mode should reject amount > 0
     var rejected = Qris.QrisProcessor.buildPaymentPayload(TEST_QRIS_SAMPLE, 5000, "static_only");
