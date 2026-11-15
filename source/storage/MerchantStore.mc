@@ -58,11 +58,10 @@ module Store {
 
             if (list.size() == 0 && getBoolProp("enable_demo_merchant", true)) {
                 var demoRes = Qris.QrisProcessor.validateStaticPayload(DEMO_QRIS);
-                var demoName = "LANDFLORIST";
+                var demoName = "MODE DEMO";
                 var demoCity = "JAKARTA";
                 if (demoRes.isValid && demoRes.data != null) {
                     var d = demoRes.data as Qris.QrisData;
-                    demoName = d.merchantName;
                     demoCity = d.merchantCity;
                 }
                 list.add(new MerchantProfile(0, demoName, demoCity, DEMO_QRIS, demoRes.isValid, demoRes.errorMessage, true));
